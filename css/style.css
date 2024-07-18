@@ -1,0 +1,153 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Play);
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+
+/*    Reset CSS  */
+* { margin:0;  padding:0; }
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#bbb;}
+img { border:0;}
+body { position:fixed;  width:100%; height:100%; background:#111;}
+
+
+/* 배경동영상 */
+.vid { width:100%; height:100%; position:fixed; top:-60px; left:0px; opacity:0.9; }
+.vid video { width:100%; min-width:1600px; object-fit: cover}
+
+/*로고*/
+h1 { position:fixed; top:90px; left:150px; z-index:10;}
+h1 img { width:250px; height:auto;}
+
+/* 헤더 */
+header { width:600px; height:600px; position:fixed; top:330px; left:300px; background:linear-gradient(-45deg,#fafafa, #a99def, #7b46af); border-radius: 50%; transform: translate(-50%, -50%); opacity:0.5}
+.vid1 { width:300px; height: 300px; position: fixed; top: 230px; left: 50px; z-index: 10; opacity: 0.7; overflow: hidden;} 
+.vid1 video {border-radius: 50%; background-color: rgb(188, 135, 235);
+	width: 100%;  /* 컨테이너에 맞게 비디오 크기 조절 */ 
+    height: 100%;  
+	object-fit: cover; /* 비디오의 원본 비율 유지하면서 박스를 완전히 채움 */ 
+}
+
+	
+	
+	
+	
+
+/* 1depth*/
+#gnb { 	width:220px; position:absolute; top:250px; right:40px;}
+#gnb>li {position:relative; }
+#gnb>li>a { display:block; width:200px; height:50px; font:bold 18px/3 play; color:#222; box-sizing:border-box; padding-right:40px; text-align:right;}
+#gnb>li.on>a { background:#111; color:#fff;}
+#gnb>li:hover>a { background:#111; color:#fff;}
+#gnb em { display:inline-block; transform:skewX(0deg)!important; }
+#gnb em i { 	margin-right:20px;}
+
+/* 2depth */
+#gnb ul { position:absolute; left:0px;  top:0px; opacity:0; transition:all 0.4s;}
+#gnb>li:hover ul { opacity:0.8; left:205px; }
+#gnb ul a { display:block; width:180px; height:40px; background:#222; border-bottom:1px solid #bca8d1; font:bold 16px/2.5 arial; color:#fff; box-sizing:border-box; padding-left:50px; margin-bottom:3px; transition:all 0.5s; }
+#gnb ul a:hover { background:#bca8d1; color:#333; }
+#gnb>li.on ul { opacity:0.8; left:205px; top:-10px; }
+#gnb li.on ul a { background:#444; opacity:0.7; } 
+
+.circle1 {
+	width: 200px; /* 원의 너비 */
+	height: 200px; /* 원의 높이 */
+	background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), #c7cdcc72 70%);
+	 /* background-color: skyblue;  배경 색 */
+	position: fixed; top: 690px; left: 120px; /* 위치 지정 */
+	border-radius: 50%; /* 원 모양을 만들기 위해 border-radius를 50%로 설정 */
+	opacity:0.6 ;/* 투명도 */
+	animation: blink 2s infinite ease-in-out;
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.circle2 {
+	width: 250px; /* 원의 너비 */
+	height: 250px; /* 원의 높이 */
+	background:linear-gradient(70deg,#fafafa, #a99def, #7b46af);
+	 /* background-color: skyblue;  배경 색 */
+	position: fixed; top: 560px; left: 50px; /* 위치 지정 */
+	border-radius: 50%; /* 원 모양을 만들기 위해 border-radius를 50%로 설정 */
+	opacity:0.6; /* 투명도 */
+}
+
+.circle3 {
+	width: 100px; /* 원의 너비 */
+	height: 100px; /* 원의 높이 */
+	background:linear-gradient(70deg,#fafafa, #a99def, #7b46af);
+	 /* background-color: skyblue;  배경 색 */
+	position: fixed; top: 20px; left: 450px; /* 위치 지정 */
+	border-radius: 50%; /* 원 모양을 만들기 위해 border-radius를 50%로 설정 */
+	opacity:0.6; /* 투명도 */
+}
+
+.circle4 {
+	width: 150px; /* 원의 너비 */
+	height: 150px; /* 원의 높이 */
+	background:linear-gradient(70deg,#fafafa, #a99def, #7b46af);
+	 /* background-color: skyblue;  배경 색 */
+	position: fixed; top: 750px; left: 0px; /* 위치 지정 */
+	border-radius: 50%; /* 원 모양을 만들기 위해 border-radius를 50%로 설정 */
+	opacity:0.6; /* 투명도 */
+}
+	
+
+/* sns 버튼 모음*/
+#sns { position:fixed; top:30px; right:50px;}
+#sns li { float:left; margin-right:30px;}
+#sns .fa { font-size:25px; color:#703f99; opacity:0.5; transform:scale(1); 	transition:all 0.5s;}
+#sns .fa:hover { opacity:1; transform:scale(1.4);}
+
+/* 텍스트 박스 */
+.txtBox { width:340px; height:280px; position:fixed; top:150px; right:150px; }
+.txt { position:absolute; top:80px; right:0px; font-size:34px; font-family:play; color:#bbb; letter-spacing:-2px;}
+.txt b { font:bold 34px arial; color:#703f99; 	margin-left:20px;}
+.tit { position:absolute; top:0px; right:0px; font-size:50px; color:#703f99; font-family: 'Monoton', cursive; letter-spacing:-1px;}
+.tit em { font-size:35px; font-family:play; color:#fff;}
+
+/* contents 레이아웃 */
+#side { width:800px; height:100%; position:fixed; bottom:0px; right:-800px; background:#bca8d1; opacity:0.5; transform:skewX(-40deg); transition:all 0.5s;}
+#side:hover { right:-500px; opacity:0.6;}
+#side .con { width:400px; height:100%; position: absolute; left:150px; bottom:0px; background:#a771d3; 	box-sizing:border-box; padding:10px; transition:all  1s;}
+#side:hover .con { left:50px;}
+
+/* contents내 썸네일 */
+#side .con p { width: 300px; height:100px; position:absolute; left:50px;}
+#side .con p em { display:inline-block; font:bold 16px/1.7 arial; color:#333; transform:skewX(40deg);}
+#side .con p img { width:300px; height:70px; opacity:0.3; transition:all 0.5s;}
+#side .con p img:hover { opacity:1;}
+#side .con p:nth-child(1) { bottom:270px; transform: translateX(200px); transition:all  0.4s;}
+#side .con p:nth-child(2) { bottom:160px; transform: translateX(200px); transition:all  0.8s;}
+#side .con p:nth-child(3) { bottom:50px; transform: translateX(200px); transition:all  1.2s;}
+#side:hover .con p { transform:translateX(0px);}	
+
+/* 자동롤링 버튼*/
+#side .btnContents { width:150px; height:50px; position:absolute;  bottom:40px; left:100px; color:#7a3b91;	transform:skewX(40deg); }
+#side:hover .btnContents { left:700px;}	
+.btnContents i { font-size:60px; position:absolute; bottom:0px; right:0px; opacity:1;}
+.btnContents i:nth-child(1) { animation:ani linear 1.5s 0s infinite;}
+.btnContents i:nth-child(2) { animation:ani linear 1.5s 0.5s infinite;}
+.btnContents i:nth-child(3) { animation:ani linear 1.5s 1.0s infinite;}
+
+@keyframes ani {
+	0% { right:0px; transform:sclae(1); opacity:1;}
+	100% { right:100px; transform:scale(1.5); opacity:0;}
+}
+
+@media screen and (max-width: 950px) {
+	.vid video{ min-width: 600px;}
+	header {display: none;}
+	h1 {display: none;}
+	.vid1 {display: none;}
+
+	.circle1, .circle2, .circle3, .circle4{ display: none;}
+	#side { display: none;}
+	.txtBox { display: none;}
+}
